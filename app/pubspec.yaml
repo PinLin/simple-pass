@@ -1,0 +1,31 @@
+name: simple_pass
+description: OTP generator for SafeNet MobilePASS tokens (Activation Codes and Enrollment Strings, event-based, time-based and challenge-response) and standard TOTP/HOTP tokens.
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.5
+  flutter: ">=3.41.9"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+  crypto: ^3.0.5
+  flutter_secure_storage: ^11.2.0
+  xml: ^6.6.1
+  flutter_zxing: ^3.1.0
+  image_picker_android: ^0.8.13+17
+  image_picker_platform_interface: ^2.11.2
+  camera: ^0.12.0+2
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  generate: true

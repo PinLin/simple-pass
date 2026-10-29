@@ -1,0 +1,325 @@
+{
+  "@@locale": "en",
+  "appTitle": "SimplePASS",
+  "profileListEmpty": "No profiles yet. Tap + to add one.",
+  "profileCounterCompactLabel": "#{counter}",
+  "@profileCounterCompactLabel": {
+    "placeholders": {
+      "counter": {
+        "type": "int"
+      }
+    }
+  },
+  "addProfileTooltip": "Add profile",
+  "addProfileTitle": "Add profile",
+  "fieldName": "Name",
+  "fieldNameRequired": "Name is required",
+  "fieldActivationCode": "Activation Code",
+  "activationCodeHint": "XXXXX-XXXXX-XXXXX-XXXXX",
+  "activationCodeRequired": "Activation Code is required",
+  "activationCodeInvalid": "Invalid Activation Code",
+  "activationCodePolicyMismatch": "This Activation Code's format doesn't match the Policy String version",
+  "regenerateActivationCodeTooltip": "Generate a new Activation Code",
+  "copyActivationCodeTooltip": "Copy Activation Code",
+  "copiedActivationCodeMessage": "Activation Code copied",
+  "fieldPolicy": "Policy String",
+  "fieldPolicyOptional": "Policy String (optional)",
+  "policyInvalid": "Invalid Policy String",
+  "policyUnsupportedVersion": "This Policy String version isn't supported",
+  "policyUnsupportedOtpType": "This Policy String's passcode type isn't supported",
+  "codeRefreshCountdown": "{seconds, plural, =1{New passcode in 1 second} other{New passcode in {seconds} seconds}}",
+  "@codeRefreshCountdown": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "fieldCounter": "Counter",
+  "counterInvalid": "Counter must be a non-negative integer",
+  "saveButton": "Save",
+  "cancelButton": "Cancel",
+  "markUsedButton": "Mark as used",
+  "markedUsedMessage": "Marked #{counter} as used",
+  "@markedUsedMessage": {
+    "placeholders": {
+      "counter": {
+        "type": "int"
+      }
+    }
+  },
+  "undoButton": "Undo",
+  "undoUnavailableMessage": "Can't undo: the counter has changed since.",
+  "deleteProfileButton": "Delete",
+  "deleteConfirmTitle": "{count, plural, =1{Delete profile?} other{Delete {count} profiles?}}",
+  "deleteConfirmButton": "Delete",
+  "openSourceLicensesLabel": "Open-source licenses",
+  "settingsTitle": "Settings",
+  "authNotAvailableMessage": "No fingerprint, face, or PIN is set up on this device.",
+  "authFailedMessage": "Authentication failed",
+  "counterTooLarge": "Counter cannot exceed {max}",
+  "@counterTooLarge": {
+    "placeholders": {
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "authCanceledMessage": "Authentication canceled",
+  "authLockedOutMessage": "Too many attempts. Try again later.",
+  "loadErrorMessage": "Could not read the saved data. Nothing will be changed until it loads successfully.",
+  "retryButton": "Retry",
+  "saveFailedMessage": "Could not save changes",
+  "copyCodeAction": "Copy passcode",
+  "fieldPin": "PIN",
+  "pinHint": "Optional, {min}–{max} digits",
+  "@pinHint": {
+    "placeholders": {
+      "min": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "pinInvalid": "PIN must be {min}–{max} digits",
+  "@pinInvalid": {
+    "placeholders": {
+      "min": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "appendPinOnCopyLabel": "Append PIN when copying",
+  "appendPinOnCopySubtitle": "Copies the PIN followed by the passcode",
+  "copiedPinAndCodeMessage": "PIN + passcode copied",
+  "copiedCodeMessage": "Passcode copied",
+  "clipboardClearLabel": "Clear clipboard automatically",
+  "clipboardClearNever": "Never",
+  "clipboardClearSeconds": "{seconds} seconds",
+  "@clipboardClearSeconds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "clipboardClearMinutes": "{minutes, plural, =1{1 minute} other{{minutes} minutes}}",
+  "@clipboardClearMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "unlockButton": "Unlock",
+  "editButton": "Edit",
+  "keysInvalidatedMessage": "The phone's screen lock was removed, so profiles that require authentication can no longer be unlocked. They can only be deleted.",
+  "deleteUnrecoverableButton": "Delete these profiles",
+  "requireAuthLabel": "Require authentication to open the app",
+  "requireAuthSubtitle": "Unlock with fingerprint, face, or screen lock",
+  "requireAuthWarningMessage": "If the phone's screen lock is removed later, protected profiles can no longer be unlocked; they can only be deleted. Keep a separate copy of your Activation Codes and secret keys (or the services' recovery codes); registered profiles would then need a new Enrollment String.",
+  "requireAuthConfirmButton": "Turn on",
+  "challengeCodeLabel": "Challenge Code",
+  "challengeCodeHint": "Enter {length} digits",
+  "@challengeCodeHint": {
+    "placeholders": {
+      "length": {
+        "type": "int"
+      }
+    }
+  },
+  "enterChallengeCodeAction": "Enter Challenge Code",
+  "okButton": "OK",
+  "addKindActivationCodeSubtitle": "Generate or enter an Activation Code",
+  "addKindEnrollmentString": "MobilePASS – Auto enrollment",
+  "addKindEnrollmentStringSubtitle": "Enter the Enrollment String",
+  "enrollTitle": "MobilePASS – Auto enrollment",
+  "fieldEnrollmentString": "Enrollment String",
+  "enrollmentStringRequired": "Enrollment String is required",
+  "enrollmentStringInvalid": "Invalid Enrollment String",
+  "enrollmentStringNotHttps": "The enrollment server must use https",
+  "pasteFromClipboardTooltip": "Paste from clipboard",
+  "clipboardEmptyMessage": "The clipboard has no text",
+  "enrollServerLabel": "Registers with {host}",
+  "@enrollServerLabel": {
+    "placeholders": {
+      "host": {
+        "type": "String"
+      }
+    }
+  },
+  "fieldUserId": "User ID",
+  "userIdRequired": "User ID is required",
+  "fieldPassphrase": "Passphrase",
+  "passphraseRequired": "Passphrase is required",
+  "enrollButton": "Register",
+  "enrollStepContacting": "Contacting the server…",
+  "enrollStepRegistering": "Registering…",
+  "otpPinTitle": "Set OTP PIN",
+  "otpPinMessage": "Set a PIN of {min}–{max} digits.",
+  "@otpPinMessage": {
+    "placeholders": {
+      "min": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "otpPinMessageAlphanumeric": "Set a PIN of {min}–{max} letters or digits.",
+  "@otpPinMessageAlphanumeric": {
+    "placeholders": {
+      "min": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "otpPinInvalid": "PIN doesn't meet the requirements",
+  "continueButton": "Continue",
+  "enrollErrorNetwork": "Couldn't reach the enrollment server. Check the connection and try again.",
+  "enrollErrorHttp": "The enrollment server returned HTTP {status}.",
+  "@enrollErrorHttp": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "enrollErrorBadResponse": "The server's reply isn't a valid enrollment response.",
+  "enrollErrorRejected": "The server refused the registration ({status}). Check the user ID and passphrase, or ask for a new Enrollment String.",
+  "@enrollErrorRejected": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "enrollErrorMac": "The server's key confirmation failed. Nothing was saved.",
+  "enrollErrorPolicy": "The server sent a Policy String this app doesn't support. The server may already have completed the registration; ask your administrator for a new Enrollment String.",
+  "enrollSaveFailedMessage": "Registered, but the profile couldn't be saved. Tap Save to try again.",
+  "fieldSerial": "Serial number",
+  "profileKeyInvalid": "Invalid stored key",
+  "enrollErrorCertificate": "Couldn't verify the enrollment server's certificate.",
+  "addKindTotpSubtitle": "Scan a QR code or enter the secret key",
+  "fieldSecret": "Secret key",
+  "secretRequired": "Secret key is required",
+  "secretInvalid": "Not a valid Base32 secret key",
+  "copiedSecretMessage": "Secret key copied",
+  "scanQrButton": "Scan QR code",
+  "importQrPhotoButton": "From photo",
+  "scanQrTitle": "Scan QR code",
+  "cameraUnavailableMessage": "The camera couldn't be started. Use \"From photo\" or enter the secret key by hand.",
+  "cameraPermissionDeniedMessage": "Scanning needs camera access. You can still enter the secret key by hand.",
+  "cameraPermissionBlockedMessage": "Camera access is turned off for SimplePASS. Turn it on in system settings to scan, or enter the secret key by hand.",
+  "openSettingsButton": "Open settings",
+  "qrNotFoundMessage": "No QR code found in that photo",
+  "otpauthImportedMessage": "Filled in from the link",
+  "otpauthNotLinkMessage": "Not an otpauth:// link",
+  "otpauthMigrationMessage": "Google Authenticator export codes (otpauth-migration://) aren't supported. Use each account's own QR code instead.",
+  "otpauthUnsupportedTypeMessage": "Only TOTP and HOTP links are supported",
+  "otpauthInvalidSecretMessage": "The link's secret is missing or invalid",
+  "otpauthUnsupportedParametersMessage": "The link uses an algorithm, digit count, period or counter this app doesn't support",
+  "cameraNotFoundMessage": "No camera this app can use was found. Use \"From photo\" or enter the secret key by hand.",
+  "scanBackButton": "Back",
+  "addKindActivationCode": "MobilePASS – Manual enrollment",
+  "otpauthEnrollmentStringMessage": "This is an Enrollment String. Add it with \"MobilePASS – Auto enrollment\" instead.",
+  "tapToRevealLabel": "Tap to reveal passcodes",
+  "tapToRevealSubtitle": "Passcodes are masked with dots; tap a profile to reveal them",
+  "revealCodeAction": "Show and copy passcode",
+  "selectedCount": "{count} selected",
+  "@selectedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectAction": "Select",
+  "deleteSelectedConfirmMessage": "{count, plural, =1{This permanently deletes 1 profile.} other{This permanently deletes {count} profiles.}}",
+  "@deleteSelectedConfirmMessage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@deleteConfirmTitle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "deselectAction": "Deselect",
+  "parameterTimeBased": "Time-based",
+  "parameterCounterBased": "Counter-based",
+  "parameterDigits": "{digits} digits",
+  "@parameterDigits": {
+    "placeholders": {
+      "digits": {
+        "type": "int"
+      }
+    }
+  },
+  "protectedProfilesBanner": "Authentication is off, but some profiles are still protected.",
+  "unprotectNowButton": "Remove protection",
+  "appLockedMessage": "SimplePASS is locked",
+  "allowScreenshotsLockNote": "With the app lock on, Android 12 and older always block screenshots, so the recent apps screen can't show your profiles.",
+  "blockScreenshotsLabel": "Block screenshots",
+  "blockScreenshotsSubtitle": "Prevent other apps from capturing the screen",
+  "showSecretTooltip": "Show",
+  "hideSecretTooltip": "Hide",
+  "challengeCodeSemanticsLabel": "Challenge Code {code}",
+  "@challengeCodeSemanticsLabel": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "unsavedChangesTitle": "Unsaved changes",
+  "discardButton": "Discard",
+  "keepEditingButton": "Keep editing",
+  "typeStandardTotp": "TOTP",
+  "typeStandardHotp": "HOTP",
+  "typeChallengeResponse": "Challenge-response",
+  "notSetValue": "Not set",
+  "copiedEquivalentLinkMessage": "Link copied",
+  "copyOtpauthLinkButton": "Copy otpauth link",
+  "moreOptionsTooltip": "More options",
+  "copiedFieldMessage": "Copied",
+  "copyFieldTooltip": "Copy",
+  "otpChallengeLengthLabel": "Challenge Code length",
+  "otpTypeLabel": "OTP type",
+  "otpDigitsLabel": "Code length",
+  "otpAlgorithmLabel": "Algorithm",
+  "otpPeriodLabel": "Period (seconds)",
+  "otpPeriodInvalid": "Enter a period from 1 to 3600 seconds",
+  "deleteProfileMessage": "Delete this profile from this phone? This does not remove the authenticator from the service.",
+  "profileDetailsTitle": "{type} profile",
+  "@profileDetailsTitle": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      },
+      "spacing": {
+        "type": "String"
+      }
+    }
+  },
+  "openCameraButton": "Open camera",
+  "addKindTotpMenuTitle": "Add manually",
+  "mobilePassFormatLabel": "Use MobilePASS format",
+  "registrationInfoMenuItem": "MobilePASS registration info",
+  "mobilePassFormatLine": "MobilePASS format",
+  "addTotpScreenTitle": "Add manually"
+}
