@@ -684,7 +684,10 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
     }
   }
 
-  bool get _usesMobilePassAlgorithm => _initial != null && (!_initial.isStandardOtp || _initial.mobilePassTime);
+  // MobilePASS event-based and challenge-response codes are plain RFC 4226 HOTP / RFC 6287 OCRA; only the
+  // time-based ones count steps from 2000 instead of 1970.
+  bool get _usesMobilePassAlgorithm =>
+      _initial != null && (_initial.isStandardOtp ? _initial.mobilePassTime : _initial.isTimeBased);
 
   // Standard tokens, including a MobilePASS-format TOTP, have no enrollment data to show.
   bool get _hasRegistrationInfo => _initial != null && !_initial.isStandardOtp;

@@ -48,10 +48,11 @@ for project context.
    earlier keep working even if their check characters are wrong. An existing profile's edit page is
    titled by the kind of code it makes rather than how it was added:
    "TOTP profile", "HOTP profile" or "Challenge-response profile" (a
-   time-based MobilePASS profile is a "TOTP profile"). A profile that uses the
-   MobilePASS algorithm (MobilePASS manual or auto enrollment, or manual TOTP
-   with "Use MobilePASS format") shows a non-clickable "MobilePASS format" line
-   at the top; standard TOTP/HOTP has none. The secret key is a read-only field
+   time-based MobilePASS profile is a "TOTP profile"). A profile whose codes
+   follow the MobilePASS algorithm (MobilePASS time-based, or manual TOTP with
+   "Use MobilePASS format") shows a non-clickable "MobilePASS format" line at
+   the top; standard TOTP/HOTP and MobilePASS event-based and
+   challenge-response profiles (plain HOTP and OCRA over SHA-256) have none. The secret key is a read-only field
    above the digits setting, hidden by default with eye and copy buttons
    (Base32 for standard OTP, the derived key in Base32 for MobilePASS), and the
    parameters (digits, algorithm, period, challenge length) are read-only grey fields.

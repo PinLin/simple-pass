@@ -105,10 +105,10 @@ void main() {
   String copiedLink() => lastCopy()['text']! as String;
 
   group('manual event-based', () {
-    testWidgets('titled HOTP with the format line, no top button, and the info sheet in the menu', (tester) async {
+    testWidgets('titled HOTP without the format line, no top button, and the info sheet in the menu', (tester) async {
       await open(tester, _manual());
       expect(appBarTitle('HOTP profile'), findsOneWidget);
-      expect(tester.widget<Text>(key('sourceLine')).data, 'MobilePASS format');
+      expect(key('sourceLine'), findsNothing);
       expect(key('registrationInfoButton'), findsNothing);
       expect(key('otpFormatField'), findsNothing);
       expect(await menuItems(tester), containsAll(['registrationInfoMenuItem', 'deleteProfileButton']));
@@ -214,7 +214,7 @@ void main() {
     testWidgets('shows the serial, the registered key as Base32 and the link', (tester) async {
       await open(tester, _registered());
       expect(appBarTitle('HOTP profile'), findsOneWidget);
-      expect(tester.widget<Text>(key('sourceLine')).data, 'MobilePASS format');
+      expect(key('sourceLine'), findsNothing);
       expect(key('registrationInfoButton'), findsNothing);
       await openRegistrationInfo(tester);
       expect(
@@ -240,6 +240,7 @@ void main() {
     testWidgets('time-based: TOTP, no link and nothing about one', (tester) async {
       await open(tester, _manual(code: _timeCode, policy: '75817049'));
       expect(appBarTitle('TOTP profile'), findsOneWidget);
+      expect(tester.widget<Text>(key('sourceLine')).data, 'MobilePASS format');
       expect(key('mobilePassSecretField'), findsOneWidget);
       expectNoLinkOnPage();
       expect(await menuItems(tester), isNot(contains('copyOtpauthLinkButton')));
@@ -249,6 +250,7 @@ void main() {
     testWidgets('challenge-response: titled Challenge-response, no link and nothing about one', (tester) async {
       await open(tester, _manual(code: _timeCode, policy: '38039554'));
       expect(appBarTitle('Challenge-response profile'), findsOneWidget);
+      expect(key('sourceLine'), findsNothing);
       expect(key('mobilePassSecretField'), findsOneWidget);
       expectNoLinkOnPage();
       expect(await menuItems(tester), isNot(contains('copyOtpauthLinkButton')));
@@ -369,7 +371,7 @@ void main() {
     tester.view.physicalSize = const Size(800, 2400);
     tester.view.devicePixelRatio = 1;
     addTearDown(tester.view.reset);
-    final profile = _manual();
+    final profile = _manual(code: _timeCode, policy: '75817049');
     final store = ProfileStore(MemoryKeyValueBackend(), keystore: FakeKeystore());
     await store.saveAll([profile]);
     await pumpLocalized(
@@ -378,7 +380,7 @@ void main() {
       locale: const Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant', countryCode: 'TW'),
     );
     await tester.pumpAndSettle();
-    expect(appBarTitle('HOTP 設定檔'), findsOneWidget);
+    expect(appBarTitle('TOTP 設定檔'), findsOneWidget);
     expect(tester.widget<Text>(key('sourceLine')).data, 'MobilePASS 規格');
   });
 }

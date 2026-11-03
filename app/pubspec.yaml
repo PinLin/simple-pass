@@ -1,7 +1,7 @@
 name: simple_pass
 description: OTP generator for SafeNet MobilePASS tokens (Activation Codes and Enrollment Strings, event-based, time-based and challenge-response) and standard TOTP/HOTP tokens.
 publish_to: none
-version: 1.0.0+1
+version: 1.0.1+2
 
 environment:
   sdk: ^3.11.5
